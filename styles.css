@@ -13,6 +13,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
+    margin: 0; /* Reset margin for the body */
 }
 
 /* Bio container styles */
@@ -21,7 +22,7 @@ body {
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     overflow: hidden;
-    width: 80%;
+    width: 90%; /* Adjust width for smaller screens */
     max-width: 600px;
     display: flex;
     flex-direction: column;
@@ -43,13 +44,13 @@ body {
 }
 
 .bio-text h1 {
-    font-size: 2.5rem;
+    font-size: 2rem; /* Adjust heading size for smaller screens */
     margin-bottom: 10px;
     color: #333;
 }
 
 .bio-text p {
-    font-size: 1.2rem;
+    font-size: 1rem; /* Adjust paragraph size for smaller screens */
     margin-bottom: 15px;
     color: #666;
 }
@@ -60,7 +61,7 @@ body {
 }
 
 .bio-text ul li {
-    font-size: 1rem;
+    font-size: 0.9rem; /* Adjust list item size for smaller screens */
     color: #888;
     margin-bottom: 5px;
 }
@@ -68,4 +69,24 @@ body {
 .bio-text ul li a {
     color: #007bff;
     text-decoration: none;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+    .bio-container {
+        width: 100%; /* Full width on smaller screens */
+        border-radius: 0; /* Remove border radius for full width */
+    }
+    
+    .bio-text h1 {
+        font-size: 1.8rem; /* Adjust heading size */
+    }
+    
+    .bio-text p {
+        font-size: 1rem; /* Adjust paragraph size */
+    }
+    
+    .bio-text ul li {
+        font-size: 0.8rem; /* Adjust list item size */
+    }
 }
